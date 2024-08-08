@@ -1,43 +1,68 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mike D. Bro</title>
+    <title>Mike D. Bro - Status</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: black;
+            background-color: #000033;
             color: white;
             display: flex;
             flex-direction: column;
             min-height: 100vh;
         }
         header, footer {
-            background-color: red;
+            background-color: #000066;
             padding: 1rem;
             text-align: center;
+            border-bottom: 2px solid #00ccff;
         }
         main {
             flex: 1;
-            padding: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .status-window {
+            background-color: #000066;
+            border: 2px solid #00ccff;
+            border-radius: 10px;
+            padding: 20px;
+            width: 90%;
+            max-width: 800px;
+        }
+        .status-header {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+        .status-content {
             display: flex;
             flex-direction: column;
-            align-items: center;
         }
-        .content {
-            max-width: 800px;
-            width: 100%;
-            text-align: center;
+        h2, h3 {
+            color: #00ccff;
+            margin-top: 15px;
+            margin-bottom: 5px;
+        }
+        p {
+            margin: 5px 0;
         }
         .blue-heart {
             color: #0000FF;
         }
         .price {
-            color: red;
+            color: #ff3300;
+        }
+        footer {
+            border-top: 2px solid #00ccff;
+            border-bottom: none;
         }
     </style>
 </head>
@@ -46,31 +71,34 @@
         <h1>Mike D. Bro</h1>
     </header>
     <main>
-        <div class="content">
-            <h2>Pirate, Freedom Fighter, Humanitarian Counsellor </h2>
-            <p>We accept cash, venmo, cashapp, and trades</p>
-            <p>DM @heroesoftheundercity on Instagram, or @heroesoftheundercity.45 in the Signal app</p>
-            <p><span class="blue-heart">💙</span> 💀 <span class="blue-heart">💙</span></p>
-            <p>Pricing is Privelage-Adjustable</p>
-            <p><span class="blue-heart">💙</span> 💀 <span class="blue-heart">💙</span></p>
-            <h3>Services:</h3>
-            <h3>Jokes Therapy (aka, Improv) </h3>
-            <p class="price">$5 for 5 minutes p.p.</p>
-            <h3>Break-up Navigation & Marriage Consultation</h3>
-            <p class="price">$30 for 20 minutes p.p.</p>
-            <h3>All-Purpose Counselling</h3>
-            <p class="price">$60 for 45 minutes</p>
-            <p>Learn Techniques, Minimal Wait Times, and Overall Better, Compared to Better Help**</p>
-            <h3>Demon Slayer (min. 1hr, max 3hrs)</h3>
-            <p>Join your party of people as an old friend 🤫 </p>
-            <p class="price">$35 min + prop cost + tip at end of mission</p>
-            <h3>I/O Business Consultations</h3>
-            <p>I’ll use behavioral therapy, numerous psychological facts (no fiction/ misinformation here!**), and UX research principles to make an informed diagnosis on your company’s direction.</p>
-            <p class="price">$80-$120, negotiable</p>
-            <h3>Themed Party/ Events Planning</h3>
-            <p>2 Week Notice Preferred; Price Negotiable; 2 Week Turnaround Negotiable</p>
-            <a>https://calendly.com/michaelcgbrowe</a>
-            <p>**imho</p>
+        <div class="status-window">
+            <div class="status-header">STATUS</div>
+            <div class="status-content">
+                <h2>Pirate, Freedom Fighter, Humanitarian Counsellor</h2>
+                <p>We accept cash, venmo, cashapp, and trades</p>
+                <p>DM @heroesoftheundercity on Instagram, or @heroesoftheundercity.45 in the Signal app</p>
+                <p><span class="blue-heart">💙</span> 💀 <span class="blue-heart">💙</span></p>
+                <p>Pricing is Privelage-Adjustable</p>
+                <p><span class="blue-heart">💙</span> 💀 <span class="blue-heart">💙</span></p>
+                <h3>Services:</h3>
+                <h3>Jokes Therapy (aka, Improv)</h3>
+                <p class="price">$5 for 5 minutes p.p.</p>
+                <h3>Break-up Navigation & Marriage Consultation</h3>
+                <p class="price">$30 for 20 minutes p.p.</p>
+                <h3>All-Purpose Counselling</h3>
+                <p class="price">$60 for 45 minutes</p>
+                <p>Learn Techniques, Minimal Wait Times, and Overall Better, Compared to Better Help**</p>
+                <h3>Demon Slayer (min. 1hr, max 3hrs)</h3>
+                <p>Join your party of people as an old friend 🤫</p>
+                <p class="price">$35 min + prop cost + tip at end of mission</p>
+                <h3>I/O Business Consultations</h3>
+                <p>I'll use behavioral therapy, numerous psychological facts (no fiction/ misinformation here!**), and UX research principles to make an informed diagnosis on your company's direction.</p>
+                <p class="price">$80-$120, negotiable</p>
+                <h3>Themed Party/ Events Planning</h3>
+                <p>2 Week Notice Preferred; Price Negotiable; 2 Week Turnaround Negotiable</p>
+                <p><a href="https://calendly.com/michaelcgbrowe" style="color: #00ccff;">https://calendly.com/michaelcgbrowe</a></p>
+                <p>**imho</p>
+            </div>
         </div>
     </main>
     <footer>
@@ -78,4 +106,3 @@
     </footer>
 </body>
 </html>
-
