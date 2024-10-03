@@ -65,8 +65,29 @@
             border-bottom: none;
         }
         .centered-content {
-    text-align: center;
-}
+            text-align: center;
+        }
+        #tarotReading {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #000044;
+            border-radius: 5px;
+        }
+        #tarotResult {
+            margin-top: 10px;
+        }
+        button {
+            background-color: #00ccff;
+            color: #000033;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #0099cc;
+        }
     </style>
 </head>
 <body>
@@ -90,7 +111,7 @@
 
                 <div class="centered-content" style="text-align: center;">
                     <p><span class="blue-heart">💙</span> 💙 <span class="blue-heart">💙</span></p>
-                    <p>Pricing is Privelage-Adjustable</p>
+                    <p>Pricing is Privilege-Adjustable</p>
                     <p><span class="blue-heart">💙</span> 💙 <span class="blue-heart">💙</span></p>
                     <br/>
                     <h2>Services</h2>
@@ -100,6 +121,10 @@
                 <h3>Tarot Reading</h3>
                 <p>Get invaluable future insights and current set-ups</p>
                 <p class="price"> $ Entirely Negotiable ($5 or 1 beer: suggested price)</p>
+                <div id="tarotReading">
+                    <button onclick="performReading()">Meditate on an Issue for a Free Past-Present-Future Major Arcana Spread</button>
+                    <div id="tarotResult"></div>
+                </div>
                 <br/>
 
                 <h3>Tarot Station</h3>
@@ -123,17 +148,62 @@
                 <br/>
                 <p><span class="blue-heart">💙</span> 💙 <span class="blue-heart">💙</span></p>
                 <br/>
-                 <a href="https://www.youtube.com/watch?v=BGbGpm7M12w" style=color: #00ccff;>Click to be Hypnotized</a>
-
-                <a href="https://www.linkedin.com/in/michael-browe" style=color: #00ccff;>Boost My LinkedIn</a>
-
-
-
-                
+                <a href="https://www.youtube.com/watch?v=BGbGpm7M12w" style="color: #00ccff;">Click to be Hypnotized</a>
+                <br/>
+                <a href="https://www.linkedin.com/in/michael-browe" style="color: #00ccff;">Boost My LinkedIn</a>
             </div>
             <p>&copy; 2024</p>
         </div>
-
+    </main>
+    <footer>
     </footer>
+
+    <script>
+        const tarotCards = {
+            "The Fool": "New Beginnings",
+            "The Magician": "Manifestation, Resourcefulness",
+            "The High Priestess": "Intuition",
+            "The Empress": "Femininity, Divinity",
+            "The Emperor": "Authority, Structure, Bontrol",
+            "The Hierophant": "Beliefs, Conformity",
+            "The Lovers": "Love, Relationships, choices",
+            "The Chariot": "Willpower",
+            "Strength": "Courage, Control, Compassion",
+            "The Hermit": "Soul-searching, Introspection,",
+            "Wheel of Fortune": "Cycles of Karma",
+            "Justice": "Fairness, Truth, Cause and Effect",
+            "The Hanged Man": "Surrender, New Perspectives, Enlightenment",
+            "Death": "Endings, Change, Transformation",
+            "Temperance": "Balance, Moderation, Patience",
+            "The Devil": "Addiction, The Shadow",
+            "The Tower": "Sudden Change, Upheaval, Revelation",
+            "The Star": "Hope, Faith, Purpose, Renewal",
+            "The Moon": "Illusion, Fear, Subconscious, Anxiety",
+            "The Sun": "Positivity, Fun, Warmth, Success",
+            "Judgement": "Rebirth, Absolution",
+            "The World": "Completion, Accomplishment"
+        };
+
+        function drawCard() {
+            const cards = Object.keys(tarotCards);
+            return cards[Math.floor(Math.random() * cards.length)];
+        }
+
+        function performReading() {
+            const past = drawCard();
+            const present = drawCard();
+            const future = drawCard();
+
+            const result = `
+                <h4>Your Quick Tarot Reading:</h4>
+                <p><strong>Past:</strong> ${past} - ${tarotCards[past]}</p>
+                <p><strong>Present:</strong> ${present} - ${tarotCards[present]}</p>
+                <p><strong>Future:</strong> ${future} - ${tarotCards[future]}</p>
+                <p>For a more detailed reading, please book an appointment.</p>
+            `;
+
+            document.getElementById('tarotResult').innerHTML = result;
+        }
+    </script>
 </body>
 </html>
